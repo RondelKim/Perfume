@@ -1,0 +1,151 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eaf1f8;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.login-content {
+  flex: 1;
+  padding: 60px 100px 60px 100px; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; // Align text to the left
+}
+
+.login-title {
+  font-size: 36px; // Slightly larger for better visibility
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.login-subtitle {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.login-input-group,
+.login-password-group {
+  width: 100%;
+  max-width: 500px; // Increase max width for better UI
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    padding: 16px; // Increase padding for larger textboxes
+    border: 1px solid #666;
+    background: transparent;
+    color: white;
+    font-size: 18px; // Increase font size for readability
+    border-radius: 6px;
+  }
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  font-size: 14px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.login-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+
+  span {
+    line-height: 1; // Resets line height to ensure alignment
+    display: flex;
+    align-items: center;
+  }
+}
+
+.login-checkbox {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.login-remember-label span {
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+
+.login-submit-btn {
+  width: 100%;
+  max-width: 500px;
+  padding: 16px; // Increase padding for a bigger button
+  background: red;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 15px;
+
+  &:hover {
+    background: darkred;
+  }
+}
+
+.login-signup {
+  margin-top: 15px;
+  font-size: 14px;
+
+  .login-signup-link {
+    color: #ff9f00;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.login-image-section {
+  flex: 1;
+  background: url("../imgs/vero.svg") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-content {
+    padding: 30px;
+  }
+
+  .login-image-section {
+    height: 40vh;
+  }
+}
