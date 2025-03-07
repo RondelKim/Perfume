@@ -4,6 +4,10 @@
  * building robust, powerful web applications using React + Laravel.
  */
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 require('./bootstrap');
 
 /**
@@ -13,5 +17,3 @@ require('./bootstrap');
  */
 
 require('./components/Routers');
-
-

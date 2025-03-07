@@ -1,19 +1,20 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Example from "./Example";
+import Homepage from "./homepage";
 import Login from "./login";
 import Register from "./register";
-
+import Men from "./men";  // Import Men.js
 
 export default function Routers() {
     return (
         <Router>
             <Routes>
-                {/* Login Page */}
-                <Route path="/" element={<Example />} />
+                {/* Pages */}
+                <Route path="/" element={<Homepage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/men" element={<Men />} />  {/* Men Page Route */}
             </Routes>
         </Router>
     );
