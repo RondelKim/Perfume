@@ -1,128 +1,136 @@
 .register-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #eaf1f8; /* Updated to match login.scss */
-  }
-  
-  .register-card {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-    overflow: hidden;
-    box-shadow: none;
-  }
-  
-  .register-content {
-    background: #111; /* Updated to match login.scss */
-    padding: 60px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-  }
-  
-  .register-title {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .register-form-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .register-row {
-    display: flex;
-    gap: 15px;
-  }
-  
-  input, select {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #666; /* Updated border color */
-    background: transparent;
-    color: white;
-    border-radius: 6px;
-  }
-  
-  select {
-    background-color: #222; /* Updated dropdown background */
-    color: white;
-  }
-  
-  option {
-    background-color: #222; /* Ensures dropdown options are visible */
-    color: white;
-  }
-  
-  .register-password-group {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .password-toggle {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .register-dropdowns {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .register-submit-btn {
-    background: red;
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .register-submit-btn:hover {
-    background: darkred;
-  }
-  
-  .register-image-section {
-    width: 50%;
-    height: 100vh; /* Matched size to login.scss */
-    background: url("../imgs/vero.svg") center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .register-brand {
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eaf1f8; /* Remains the same */
+}
+
+.register-card {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.register-content {
+  background: #fff; /* Changed from #111 to white */
+  padding: 60px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000; /* Changed default text color to black */
+  gap: 20px; /* Added spacing between sections */
+}
+
+.register-title {
+  color: #000; /* Changed from white to black */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.register-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Added spacing between form elements */
+}
+
+.register-row {
+  display: flex;
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #666;
+  background: transparent;
+  color: #000; /* Changed from white to black */
+  border-radius: 6px;
+}
+
+select {
+  background-color: #f0f0f0; /* Adjusted dropdown background for visibility with black text */
+  color: #000; /* Changed from white to black */
+}
+
+option {
+  background-color: #f0f0f0; /* Adjusted for visibility with black text */
+  color: #000; /* Changed from white to black */
+}
+
+.register-password-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.register-dropdowns {
+  display: flex;
+  gap: 15px;
+}
+
+.register-submit-btn {
+  background: #000; /* Changed to black */
+  color: #fff; /* Changed text color to white */
+  padding: 14px;
+  border: 1px solid #000; /* Border matches background */
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    background: #333; /* Slightly lighter black for a subtle hover effect */
+    color: #fff; /* Keeps text white */
   }
 
-  @media (max-width: 768px) {
-    .register-card {
+  &:active {
+    background: #555; /* Even lighter black for a pressed effect */
+  }
+}
+
+
+.register-image-section {
+  width: 50%;
+  height: 100vh;
+  background: url("../imgs/logo.svg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.register-brand {
+  font-size: 50px;
+  font-weight: bold;
+  color: white; /* Remains white as it's on the image section */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .register-card {
       flex-direction: column;
-    }
-  
-    .register-content {
+  }
+
+  .register-content {
       width: 100%;
       padding: 40px;
-    }
-  
-    .register-image-section {
+      gap: 15px; /* Adjusted spacing for smaller screens */
+  }
+
+  .register-image-section {
       width: 100%;
       height: 40vh;
-    }
   }
+}

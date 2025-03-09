@@ -11,7 +11,7 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: #fff; /* Changed from #111 to white */
   border-radius: 0;
   box-shadow: none;
 }
@@ -19,37 +19,39 @@
 .login-content {
   flex: 1;
   padding: 60px 100px 60px 100px; 
-  color: white;
+  color: #000; /* Changed from white to black */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left; // Align text to the left
+  text-align: left;
 }
 
 .login-title {
-  font-size: 36px; // Slightly larger for better visibility
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #000; /* Changed from white to black (inherited from .login-content) */
 }
 
 .login-subtitle {
   font-size: 18px;
   margin-bottom: 25px;
+  color: #000; /* Changed from white to black (inherited from .login-content) */
 }
 
 .login-input-group,
 .login-password-group {
   width: 100%;
-  max-width: 500px; // Increase max width for better UI
+  max-width: 500px;
   margin-bottom: 20px;
 
   input {
     width: 100%;
-    padding: 16px; // Increase padding for larger textboxes
+    padding: 16px;
     border: 1px solid #666;
     background: transparent;
-    color: white;
-    font-size: 18px; // Increase font size for readability
+    color: #000; /* Changed from white to black */
+    font-size: 18px;
     border-radius: 6px;
   }
 }
@@ -62,6 +64,7 @@
   font-size: 14px;
   margin: 10px 0;
   align-items: center;
+  color: #000; /* Changed from white to black */
 }
 
 .login-remember-label {
@@ -76,9 +79,10 @@
   }
 
   span {
-    line-height: 1; // Resets line height to ensure alignment
+    line-height: 1;
     display: flex;
     align-items: center;
+    color: #000; /* Changed from white to black */
   }
 }
 
@@ -92,29 +96,37 @@
 .login-remember-label span {
   display: inline-block;
   vertical-align: middle;
-  
 }
 
 .login-submit-btn {
   width: 100%;
   max-width: 500px;
-  padding: 16px; // Increase padding for a bigger button
-  background: red;
-  color: white;
+  padding: 16px;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
   font-size: 18px;
-  border: none;
+  border: 1px solid #000; /* Matches background */
   cursor: pointer;
   border-radius: 6px;
   margin-top: 15px;
+  transition: background 0.3s, color 0.3s;
 
   &:hover {
-    background: darkred;
+    background: #333; /* Slightly lighter black for a subtle hover effect */
+    color: #fff; /* Keeps text white */
+  }
+
+  &:active {
+    background: #555; /* Even lighter black for a pressed effect */
   }
 }
+
+
 
 .login-signup {
   margin-top: 15px;
   font-size: 14px;
+  color: #000; /* Changed from white to black */
 
   .login-signup-link {
     color: #ff9f00;
@@ -129,7 +141,7 @@
 
 .login-image-section {
   flex: 1;
-  background: url("../imgs/vero.svg") center/cover;
+  background: url("../imgs/logo.svg") center/cover;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Krona+One&family=Arial&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
@@ -11980,7 +11980,7 @@ textarea.form-control-lg {
   display: flex;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: #fff; /* Changed from #111 to white */
   border-radius: 0;
   box-shadow: none;
 }
@@ -11988,7 +11988,7 @@ textarea.form-control-lg {
 .login-content {
   flex: 1;
   padding: 60px 100px 60px 100px;
-  color: white;
+  color: #000; /* Changed from white to black */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11999,11 +11999,13 @@ textarea.form-control-lg {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #000; /* Changed from white to black (inherited from .login-content) */
 }
 
 .login-subtitle {
   font-size: 18px;
   margin-bottom: 25px;
+  color: #000; /* Changed from white to black (inherited from .login-content) */
 }
 
 .login-input-group,
@@ -12018,7 +12020,7 @@ textarea.form-control-lg {
   padding: 16px;
   border: 1px solid #666;
   background: transparent;
-  color: white;
+  color: #000; /* Changed from white to black */
   font-size: 18px;
   border-radius: 6px;
 }
@@ -12031,6 +12033,7 @@ textarea.form-control-lg {
   font-size: 14px;
   margin: 10px 0;
   align-items: center;
+  color: #000; /* Changed from white to black */
 }
 
 .login-remember-label {
@@ -12047,6 +12050,7 @@ textarea.form-control-lg {
   line-height: 1;
   display: flex;
   align-items: center;
+  color: #000; /* Changed from white to black */
 }
 
 .login-checkbox {
@@ -12065,21 +12069,27 @@ textarea.form-control-lg {
   width: 100%;
   max-width: 500px;
   padding: 16px;
-  background: red;
-  color: white;
+  background: #000; /* Black background */
+  color: #fff; /* White text */
   font-size: 18px;
-  border: none;
+  border: 1px solid #000; /* Matches background */
   cursor: pointer;
   border-radius: 6px;
   margin-top: 15px;
+  transition: background 0.3s, color 0.3s;
 }
 .login-submit-btn:hover {
-  background: darkred;
+  background: #333; /* Slightly lighter black for a subtle hover effect */
+  color: #fff; /* Keeps text white */
+}
+.login-submit-btn:active {
+  background: #555; /* Even lighter black for a pressed effect */
 }
 
 .login-signup {
   margin-top: 15px;
   font-size: 14px;
+  color: #000; /* Changed from white to black */
 }
 .login-signup .login-signup-link {
   color: #ff9f00;
@@ -12092,7 +12102,7 @@ textarea.form-control-lg {
 
 .login-image-section {
   flex: 1;
-  background: url(/images/vero.svg?bd7bc76cd861d9655cce421113af0471) center/cover;
+  background: url(/images/logo.svg?8ac5ac8fa401a2ddf250a2e23049a02b) center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12116,7 +12126,7 @@ textarea.form-control-lg {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #eaf1f8; /* Updated to match login.scss */
+  background-color: #eaf1f8; /* Remains the same */
 }
 
 .register-card {
@@ -12129,17 +12139,18 @@ textarea.form-control-lg {
 }
 
 .register-content {
-  background: #111; /* Updated to match login.scss */
+  background: #fff; /* Changed from #111 to white */
   padding: 60px;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color: #000; /* Changed default text color to black */
+  gap: 20px; /* Added spacing between sections */
 }
 
 .register-title {
-  color: white;
+  color: #000; /* Changed from white to black */
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -12147,6 +12158,7 @@ textarea.form-control-lg {
 .register-form-container {
   display: flex;
   flex-direction: column;
+  gap: 20px; /* Added spacing between form elements */
 }
 
 .register-row {
@@ -12157,21 +12169,20 @@ textarea.form-control-lg {
 input, select {
   width: 100%;
   padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #666; /* Updated border color */
+  border: 1px solid #666;
   background: transparent;
-  color: white;
+  color: #000; /* Changed from white to black */
   border-radius: 6px;
 }
 
 select {
-  background-color: #222; /* Updated dropdown background */
-  color: white;
+  background-color: #f0f0f0; /* Adjusted dropdown background for visibility with black text */
+  color: #000; /* Changed from white to black */
 }
 
 option {
-  background-color: #222; /* Ensures dropdown options are visible */
-  color: white;
+  background-color: #f0f0f0; /* Adjusted for visibility with black text */
+  color: #000; /* Changed from white to black */
 }
 
 .register-password-group {
@@ -12192,24 +12203,27 @@ option {
 }
 
 .register-submit-btn {
-  background: red;
-  color: white;
+  background: #000; /* Changed to black */
+  color: #fff; /* Changed text color to white */
   padding: 14px;
-  border: none;
+  border: 1px solid #000; /* Border matches background */
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
 }
-
 .register-submit-btn:hover {
-  background: darkred;
+  background: #333; /* Slightly lighter black for a subtle hover effect */
+  color: #fff; /* Keeps text white */
+}
+.register-submit-btn:active {
+  background: #555; /* Even lighter black for a pressed effect */
 }
 
 .register-image-section {
   width: 50%;
-  height: 100vh; /* Matched size to login.scss */
-  background: url(/images/vero.svg?bd7bc76cd861d9655cce421113af0471) center/cover;
+  height: 100vh;
+  background: url(/images/logo.svg?8ac5ac8fa401a2ddf250a2e23049a02b) center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12219,7 +12233,7 @@ option {
 .register-brand {
   font-size: 50px;
   font-weight: bold;
-  color: white;
+  color: white; /* Remains white as it's on the image section */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -12230,6 +12244,7 @@ option {
   .register-content {
     width: 100%;
     padding: 40px;
+    gap: 15px; /* Adjusted spacing for smaller screens */
   }
   .register-image-section {
     width: 100%;
@@ -12238,163 +12253,222 @@ option {
 }
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.homepage {
+  width: 100%;
 }
 
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-.breadcrumb a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.sort-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.sort-container .form-select {
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.section-title {
+.header-banner {
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
+  padding: 50px 20px;
+  background-color: #fff;
+  position: relative;
+}
+.header-banner h1, .header-banner .h1 {
+  font-family: "Krona One", sans-serif;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.header-banner .counter-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.header-banner .counter-section .counter-item {
+  text-align: center;
+}
+.header-banner .counter-section .counter-item .counter-number {
+  font-family: "Krona One", sans-serif;
+  font-size: 36px;
+  color: #000;
+  display: block;
+}
+.header-banner .counter-section .counter-item .counter-label {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+.header-banner::before, .header-banner::after {
+  content: "✨";
+  position: absolute;
+  font-size: 24px;
+  color: #000;
+}
+.header-banner::before {
+  top: 20px;
+  right: 20px;
+}
+.header-banner::after {
+  top: 40px;
+  right: 60px;
+}
+
+.sale-section {
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+}
+.sale-section .section-title {
+  font-family: "Krona One", sans-serif;
+  font-size: 36px;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+.sale-section .view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.sale-section .view-all-container .view-all-button {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.sale-section .view-all-container .view-all-button:hover {
+  background: #ddd;
+}
 
-.grid {
+.new-arrivals-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.new-arrivals-section .section-title {
+  font-family: "Krona One", sans-serif;
+  font-size: 36px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.new-arrivals-section .view-all-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.new-arrivals-section .view-all-container .view-all-button {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.new-arrivals-section .view-all-container .view-all-button:hover {
+  background: #f0f0f0;
+}
+
+.product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .product-card {
-  width: 200px;
-  min-height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   text-align: center;
-  background: white;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-.product-card:hover {
-  transform: translateY(-5px);
 }
 .product-card img {
-  max-width: 100%;
-  height: 140px;
+  width: 150px;
+  height: 200px;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-bottom: 10px;
 }
 .product-card h3, .product-card .h3 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
   font-family: "Arial", sans-serif;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5px;
-  font-size: 14px;
-}
-.rating i {
   font-size: 16px;
-  margin-right: 2px;
-  color: #FFD700;
+  color: #fff;
+  margin-bottom: 10px;
 }
-.rating .text-gray-400 {
-  color: #D3D3D3;
-}
-.rating .rating-text {
-  font-size: 14px;
-  color: #555;
-  font-weight: bold;
-  margin-left: 5px;
-}
-
-.price {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 5px;
+.product-card .price {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.price .old-price {
-  text-decoration: line-through;
-  color: #999;
-  font-size: 0.9rem;
-  opacity: 0.7;
+.product-card .price .new-price {
   font-family: "Krona One", sans-serif;
-}
-.price .new-price {
-  font-size: 1.5rem;
+  font-size: 18px;
+  color: #fff;
   font-weight: bold;
+}
+.product-card .price .old-price {
   font-family: "Krona One", sans-serif;
-  color: black;
-}
-
-.discount-badge {
-  background-color: #fee2e2;
-  font-weight: 600;
-  padding: 4px 8px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  display: inline-block;
-  font-family: "Arial", sans-serif;
-}
-
-.discount-badge .text-red-500 {
-  color: #dc2626;
-  font-weight: bold;
-  font-family: "Krona One", sans-serif;
-}
-
-.view-all-button {
-  display: block;
-  margin: 40px auto;
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
   font-size: 14px;
-  text-decoration: none;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  font-family: "Arial", sans-serif;
+  color: #999;
+  text-decoration: line-through;
 }
-.view-all-button:hover {
-  background: #444;
+.product-card .price .discount-badge {
+  background-color: #fee2e2;
+  color: #dc2626;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.subscription-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.subscription-section h2, .subscription-section .h2 {
+  font-family: "Krona One", sans-serif;
+  font-size: 24px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.subscription-section .subscription-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.subscription-section .subscription-form input {
+  padding: 10px 20px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+}
+.subscription-section .subscription-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.subscription-section .subscription-form button:hover {
+  background-color: #333;
+}
+.subscription-section .footer-logo p {
+  font-family: "Krona One", sans-serif;
+  font-size: 24px;
+  color: #000;
+  margin: 0;
 }
